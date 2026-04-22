@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O Ápice do Prazer | Guia Tântrico</title>
+  <title>O Ápice do Prazer | Guia Completo</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,8 @@
   <style>
     /* PALETA DARK LUXURY ERÓTICA */
     :root {
-      --bg-absoluto: #050001; /* Quase preto, com fundo quente */
-      --bg-veludo: #0f0104; /* Preto avermelhado */
+      --bg-absoluto: #050001;
+      --bg-veludo: #0f0104;
       --vermelho-sangue: #8a031a;
       --vermelho-neon: #d90429;
       --dourado-pele: #d4af37;
@@ -35,7 +35,6 @@
       overflow-x: hidden;
     }
 
-    /* Tipografia de Luxo e Desejo */
     h1, h2, h3, .serif {
       font-family: 'Playfair Display', serif;
     }
@@ -46,7 +45,7 @@
     }
 
     .section {
-      padding: 140px 0; /* Espaçamento longo para criar uma página densa */
+      padding: 120px 0;
       position: relative;
     }
 
@@ -54,13 +53,39 @@
       border-bottom: 1px solid var(--linha-sensual);
     }
 
-    /* Elementos invisíveis para imagens (SEM bordas, SEM texto) */
-    .espaco-imagem-vazio-hero { width: 100%; min-height: 700px; background: transparent; }
-    .espaco-imagem-vazio-menor { width: 100%; min-height: 400px; background: transparent; }
+    /* IMAGENS ELEGANTES */
+    .imagem-sensual {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      opacity: 0.85;
+      transition: opacity 0.5s;
+    }
+    .imagem-sensual:hover { opacity: 1; }
+    
+    .imagem-box-hero {
+      width: 100%;
+      max-width: 500px;
+      height: 600px;
+      margin: 0 auto;
+      border: 1px solid var(--linha-sensual);
+      padding: 10px;
+      background: var(--bg-veludo);
+    }
 
-    /* --- 1. HERO (Primeira Impressão Provocante) --- */
+    .imagem-box-menor {
+      width: 100%;
+      height: 400px;
+      border: 1px solid var(--linha-sensual);
+      padding: 10px;
+      background: var(--bg-veludo);
+    }
+
+    /* --- HERO --- */
     .hero {
-      min-height: 110vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       padding-top: 80px;
@@ -101,7 +126,6 @@
       max-width: 500px;
     }
 
-    /* Botão Sangue - Alta Conversão Erótica */
     .btn-sangue {
       display: inline-flex;
       align-items: center;
@@ -110,16 +134,17 @@
       color: #fff;
       font-family: 'Jost', sans-serif;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 15px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      padding: 24px 50px;
+      letter-spacing: 2px;
+      padding: 24px 40px;
       text-decoration: none;
       border: 1px solid var(--vermelho-neon);
       box-shadow: 0 0 30px rgba(138, 3, 26, 0.5);
       transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     .btn-sangue:hover {
@@ -128,10 +153,10 @@
       transform: translateY(-2px);
     }
 
-    /* --- 2. O PROBLEMA (Lado a Lado Fixo - Computador e Celular) --- */
+    /* --- O PROBLEMA --- */
     .grid-lado-a-lado-rigido {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* FORÇA LADO A LADO SEMPRE */
+      grid-template-columns: 1fr 1fr;
       gap: 30px;
       margin-top: 60px;
     }
@@ -143,9 +168,7 @@
       transition: border-color 0.4s;
     }
 
-    .caixa-comparacao:hover {
-      border-top-color: var(--vermelho-neon);
-    }
+    .caixa-comparacao:hover { border-top-color: var(--vermelho-neon); }
 
     .caixa-comparacao h3 {
       font-size: 22px;
@@ -156,16 +179,11 @@
 
     .caixa-comparacao p { font-size: 14px; color: var(--texto-pele); }
 
-    /* --- 3. DENSIDADE DO CONTEÚDO (Para a página ser longa) --- */
-    .secao-texto-longo {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
+    /* --- A LISTA GIGANTE DE CONTEÚDO (O Segredo da Oferta) --- */
     .titulo-secao {
-      font-size: clamp(36px, 5vw, 54px);
+      font-size: clamp(32px, 5vw, 48px);
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #fff;
     }
 
@@ -173,64 +191,54 @@
       font-size: 18px;
       color: var(--texto-pele);
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 60px;
       font-weight: 300;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* --- 4. MAPA DO PRAZER (Layout Complexo Lado a Lado) --- */
-    .mapa-grid {
+    .mega-lista-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      background: var(--linha-sensual);
-      border: 1px solid var(--linha-sensual);
-      margin-top: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .mapa-item {
-      background: var(--bg-absoluto);
-      padding: 50px 40px;
-    }
-
-    .mapa-numero {
-      font-family: 'Playfair Display', serif;
-      font-size: 50px;
-      color: var(--vermelho-sangue);
-      line-height: 1;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .mapa-item h4 { font-size: 24px; margin-bottom: 15px; color: #fff; }
-    .mapa-item p { font-size: 15px; color: var(--texto-pele); }
-
-    /* --- 5. DETALHES DOS MÓDULOS (Extenso e Erótico) --- */
-    .lista-desejo {
-      margin-top: 60px;
+    .mega-item {
       display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .item-desejo {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 40px;
       align-items: center;
-      padding: 40px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      gap: 15px;
+      background: var(--bg-veludo);
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.03);
+      transition: background 0.3s;
     }
 
-    .item-desejo h3 {
-      font-size: 32px;
+    .mega-item:hover {
+      background: rgba(138, 3, 26, 0.1);
+      border-color: var(--linha-sensual);
+    }
+
+    .mega-icone {
       color: var(--dourado-pele);
-      font-weight: 400;
-      line-height: 1.2;
+      font-size: 20px;
     }
 
-    .item-desejo p { font-size: 16px; color: var(--texto-pele); }
+    .mega-texto {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+    
+    .destaque-bonus {
+      color: var(--vermelho-neon);
+      font-weight: 500;
+    }
 
-    /* --- 6. OFERTA / CHECKOUT BLINDADO --- */
+    /* --- OFERTA / CHECKOUT --- */
     .checkout-box {
       background: var(--bg-veludo);
       border: 1px solid var(--vermelho-sangue);
@@ -272,7 +280,6 @@
 
     .garantia-sigilo strong { color: var(--vermelho-neon); }
 
-    /* BARRA FIXA CELULAR - ALTA CONVERSÃO */
     .barra-fixa-venda {
       display: none;
       position: fixed;
@@ -284,34 +291,32 @@
       z-index: 9999;
     }
 
-    /* RESPONSIVIDADE PRECISA (Mantendo Lado a Lado onde exigido) */
+    /* RESPONSIVIDADE */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-      .hero p.lead { margin: 0 auto 50px; }
+      .hero p.lead { margin: 0 auto 40px; }
       .tag-provocante { margin: 0 auto 30px; }
-      .espaco-imagem-vazio-hero { min-height: 400px; }
-      .section { padding: 90px 0; }
+      .imagem-box-hero { height: 450px; }
+      .section { padding: 80px 0; }
       
-      /* FORÇA O LADO A LADO PARA NÃO EMPILHAR E FICAR FINO NO CELULAR */
       .grid-lado-a-lado-rigido { grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 40px; }
       .caixa-comparacao { padding: 25px 15px; }
       .caixa-comparacao h3 { font-size: 16px; margin-bottom: 10px; }
-      .caixa-comparacao p { font-size: 12px; line-height: 1.5; }
+      .caixa-comparacao p { font-size: 12px; }
 
-      .mapa-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
-      .mapa-item { padding: 30px 20px; }
-      .mapa-numero { font-size: 30px; }
-      .mapa-item h4 { font-size: 18px; }
-      .mapa-item p { font-size: 12px; }
-
-      .item-desejo { grid-template-columns: 1fr; gap: 15px; text-align: center; padding: 30px 0; }
-      .item-desejo h3 { font-size: 24px; }
+      .mega-lista-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .mega-item { padding: 15px 10px; gap: 10px; }
+      .mega-texto { font-size: 13px; }
       
       .checkout-box { padding: 50px 20px; }
-      .preco-destaque { font-size: 60px; }
+      .preco-destaque { font-size: 65px; }
 
       .barra-fixa-venda { display: block; }
       body { padding-bottom: 80px; }
+    }
+    
+    @media (max-width: 400px) {
+      .mega-lista-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -320,106 +325,94 @@
   <section class="hero section-borda">
     <div class="container hero-grid">
       <div>
-        <span class="tag-provocante">O Fim da Superficialidade</span>
-        <h1>O Toque que <br><i>Desperta</i> a Pele.</h1>
-        <p class="lead">O sexo comum tem pressa. A verdadeira intimidade tem profundidade. Descubra como um toque contínuo, denso e ritmado pode incendiar o corpo inteiro e provocar níveis de prazer inexplorados.</p>
-        <a href="#checkout" class="btn-sangue">Desbloquear o Guia Completo</a>
+        <span class="tag-provocante">O Fim da Rotina Fria</span>
+        <h1>O toque que <br><i>arrepia</i> a pele.</h1>
+        <p class="lead">A verdade nua e crua: a pressa mata a intimidade. Descubra como dominar a técnica que faz o corpo inteiro tremer e reacende um tesão que vocês nem lembravam que existia.</p>
+        <a href="#checkout" class="btn-sangue">Quero Dominar a Técnica</a>
       </div>
       
-      <div class="espaco-imagem-vazio-hero"></div>
+      <div class="imagem-box-hero">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" alt="Clima Sensual" class="imagem-sensual">
+      </div>
     </div>
   </section>
 
   <section class="section section-borda">
     <div class="container">
-      <h2 class="titulo-secao">Por que a chama esfria?</h2>
-      <p class="paragrafo-sensual" style="max-width: 700px; margin: 0 auto;">
-        Com o tempo, o toque do parceiro torna-se mecânico. Uma busca direta pelo clímax que ignora a maior zona erógena do ser humano: a extensão total da pele.
+      <h2 class="titulo-secao">Por que a vontade some com o tempo?</h2>
+      <p class="paragrafo-sensual">
+        Sabe aquele toque automático? Onde você já sabe exatamente o que o outro vai fazer, antes mesmo de ele encostar? Isso mata o desejo. O corpo acostuma.
       </p>
 
       <div class="grid-lado-a-lado-rigido">
         <div class="caixa-comparacao">
-          <h3>A Rotina Fria</h3>
-          <p>Movimentos repetitivos e previsíveis. O corpo acostuma-se à fricção e a sensibilidade despenca, transformando a intimidade num ato monótono e quase automático.</p>
+          <h3>O Toque Comum</h3>
+          <p>Vai direto ao ponto, com pressa. No máximo, alivia. Mas não conecta, não surpreende, não deixa aquela vontade louca de "quero mais". Vira só mais uma obrigação na semana.</p>
         </div>
         <div class="caixa-comparacao" style="border-top-color: var(--vermelho-sangue);">
-          <h3>O Despertar Tântrico</h3>
-          <p>Um mapeamento lento e intencional. A massagem tântrica não visa o alívio rápido, mas o acúmulo prolongado de energia sexual, fazendo o corpo inteiro pulsar em expectativa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container secao-texto-longo">
-      <span class="tag-provocante" style="display: block; text-align: center; margin: 0 auto 20px;">A Metodologia</span>
-      <h2 class="titulo-secao">Muito Além da Pele</h2>
-      <p class="paragrafo-sensual">
-        Nós condensamos séculos de sabedoria sensorial num manual digital prático. Sem rituais complexos ou misticismos exagerados. Apenas a biologia do prazer aliada à condução da energia.
-      </p>
-      <p class="paragrafo-sensual">
-        Você vai aprender a ler as contrações do corpo, a coordenar respirações ofegantes e a usar a ponta dos dedos e as palmas das mãos para criar uma teia de sensações que deixa quem recebe completamente vulnerável e entregue.
-      </p>
-    </div>
-
-    <div class="container">
-      <div class="mapa-grid">
-        <div class="mapa-item">
-          <div class="mapa-numero">I</div>
-          <h4>Zonas Adormecidas</h4>
-          <p>Como tocar onde ninguém toca. A nuca, a parte interna das coxas, os flancos. Descubra como criar arrepios antes mesmo de chegar às áreas principais.</p>
-        </div>
-        <div class="mapa-item">
-          <div class="mapa-numero">II</div>
-          <h4>Pressão e Calor</h4>
-          <p>A transição exata entre o toque que roça a pele e a pressão firme que dissolve a tensão muscular, gerando ondas de calor pelo corpo.</p>
-        </div>
-        <div class="mapa-item">
-          <div class="mapa-numero">III</div>
-          <h4>Condução Visual</h4>
-          <p>A intimidade começa nos olhos. A técnica de manter o olhar para elevar a frequência cardíaca e quebrar as barreiras da vergonha.</p>
-        </div>
-        <div class="mapa-item">
-          <div class="mapa-numero">IV</div>
-          <h4>A Cascata de Energia</h4>
-          <p>Como distribuir o acúmulo de energia da pélvis para o peito e a cabeça, induzindo estados alterados de consciência e orgasmos de corpo inteiro.</p>
+          <h3>O Toque Tântrico</h3>
+          <p>É o oposto da pressa. É mapear o corpo devagar, construir o desejo gota a gota, prolongar a excitação ao máximo até a pessoa simplesmente implorar para você continuar.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section section-borda" style="background: var(--bg-veludo);">
-    <div class="container">
-      <h2 class="titulo-secao">O Que Está Oculto Neste Material</h2>
+    <div class="container hero-grid">
+      <div class="imagem-box-menor">
+        <img src="https://images.unsplash.com/photo-1616012480717-fd9867059ca0?q=80&w=800&auto=format&fit=crop" alt="Massagem e Toque" class="imagem-sensual" style="filter: brightness(0.8) contrast(1.2);">
+      </div>
       
-      <div class="lista-desejo">
-        <div class="item-desejo">
-          <h3>A Preparação do Santuário</h3>
-          <p>A atmosfera dita as regras do desejo. Um capítulo inteiro dedicado à arquitetura do ambiente: meia-luz, controle térmico, óleos essenciais e o isolamento acústico para que o mundo lá fora deixe de existir.</p>
-        </div>
-        
-        <div class="item-desejo">
-          <h3>Cartografia do Desejo</h3>
-          <p>O passo a passo coreografado. De onde começar o primeiro toque, qual a trajetória das mãos, e como usar ritmos alternados para levar o parceiro à beira do clímax — e mantê-lo lá.</p>
-        </div>
-
-        <div class="item-desejo">
-          <h3>A Entrega Psicológica</h3>
-          <p>O maior órgão sexual é o cérebro. Palavras sussurradas, o uso da respiração sincronizada e comandos sutis que fazem a outra pessoa abandonar o controle e render-se totalmente às suas mãos.</p>
-        </div>
+      <div>
+        <h2 class="titulo-secao" style="text-align: left; font-size: 36px;">Esqueça os rituais bizarros.</h2>
+        <p class="paragrafo-sensual" style="text-align: left; margin-bottom: 20px;">
+          O que você vai ver aqui não tem nada a ver com coisas esquisitas que você vê na internet. É técnica pura e simples aplicada à anatomia.
+        </p>
+        <p class="paragrafo-sensual" style="text-align: left;">
+          É saber exatamente onde colocar as mãos, que pressão usar em cada momento e como pegar o controle da situação para fazer o outro se entregar totalmente a você.
+        </p>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container hero-grid">
-      <div class="espaco-imagem-vazio-menor"></div>
-      
-      <div>
-        <h2 class="titulo-secao" style="text-align: left; font-size: 36px;">Uma Arte Feita Para Ler e Sentir.</h2>
-        <p class="paragrafo-sensual" style="text-align: left;">
-          Material 100% escrito. Escolhemos a escrita por um motivo: vídeos explícitos banalizam a técnica. A leitura ativa a sua imaginação, permitindo que você visualize e internalize cada movimento com elegância antes de aplicar na prática.
-        </p>
+    <div class="container">
+      <span class="tag-provocante" style="display: block; text-align: center; margin: 0 auto 15px;">O Arsenal Completo</span>
+      <h2 class="titulo-secao">O que você vai receber hoje:</h2>
+      <p class="paragrafo-sensual">
+        Nós não escondemos o jogo. Você vai ter acesso ao acervo mais completo já criado sobre a arte de dar prazer, cobrindo absolutamente tudo:
+      </p>
+
+      <div class="mega-lista-grid">
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Teorias Avançadas</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Relaxante</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Erótica</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Japonesa</span></div>
+        
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Tântrica</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Lingam</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Yoni</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Sensitiva</span></div>
+        
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Orgástica</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Técnicas de Posições</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Pontos de Prazer</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Sexo Oral</span></div>
+        
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Esguicho Feminino</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Pompoarismo Feminino</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Pompoarismo Masculino</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Posições Sexuais</span></div>
+        
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Desafios na Hora H</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Trilogia 50 Tons de Cinza</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Músicas Ambiente para Sexo</span></div>
+        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto destaque-bonus">Bônus Exclusivos</span></div>
+        
+        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">Acesso Vitalício</span></div>
+        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">Certificado Incluso</span></div>
+        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">Suporte Exclusivo</span></div>
+        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">7 Dias de Garantia</span></div>
       </div>
     </div>
   </section>
@@ -427,36 +420,36 @@
   <section class="section" id="checkout">
     <div class="container">
       <div class="checkout-box">
-        <span class="tag-provocante">Acesso Digital Completo</span>
-        <h2 class="titulo-secao" style="margin-bottom: 10px;">Domine a Arte Hoje</h2>
-        <p class="paragrafo-sensual">
-          O E-book oficial será enviado imediatamente para o seu e-mail ou libertado no seu dispositivo assim que a aquisição for confirmada.
+        <span class="tag-provocante">Acesso Imediato</span>
+        <h2 class="titulo-secao" style="margin-bottom: 10px;">Chegou a hora de tentar na prática.</h2>
+        <p class="paragrafo-sensual" style="margin-bottom: 30px;">
+          Baixe no celular e leia com total privacidade. Todo o pacote acima será enviado para o seu e-mail no mesmo segundo em que a compra for aprovada.
         </p>
 
         <div class="preco-wrapper">
-          <div class="preco-corte">Valor original: R$ 97,00</div>
-          <div class="preco-destaque">R$ 27</div>
-          <div style="color: var(--texto-pele); letter-spacing: 2px; font-size: 12px; margin-top: 10px; text-transform: uppercase;">Pagamento Único</div>
+          <div class="preco-corte">Valor Normal: R$ 147,00</div>
+          <div class="preco-destaque">R$ 29,99</div>
+          <div style="color: var(--texto-pele); letter-spacing: 2px; font-size: 13px; margin-top: 15px; text-transform: uppercase;">Pagamento Único</div>
         </div>
 
-        <a href="#" class="btn-sangue" style="width: 100%; max-width: 400px; font-size: 16px; padding: 25px 0;">
-          Comprar Agora por R$ 27
+        <a href="#" class="btn-sangue" style="width: 100%; max-width: 450px; font-size: 18px; padding: 25px 0;">
+          Quero o Pacote Completo Agora
         </a>
 
         <div class="garantia-sigilo">
-          <strong>⚠️ PRIVACIDADE ABSOLUTA:</strong> Sabemos da natureza íntima deste material. Para proteger o seu sigilo, o nome que aparecerá na fatura do seu cartão de crédito será completamente discreto (como "PGTO*DIGITAL"). Ninguém saberá o que você comprou. Além disso, você está protegido por 7 dias de garantia incondicional.
+          <strong>⚠️ PRIVACIDADE GARANTIDA:</strong> Sabemos que sigilo é tudo nesse assunto. Pode ficar tranquilo: o nome que vai aparecer na fatura do seu cartão é super discreto (como "PGTO*CURSO"). Ninguém vai saber o que você comprou. E se você ler e não gostar, você tem a garantia de 7 dias para pedir o dinheiro de volta. Risco zero.
         </div>
       </div>
     </div>
   </section>
 
   <footer style="text-align: center; padding: 50px 20px; font-size: 11px; color: #444; letter-spacing: 3px; text-transform: uppercase; border-top: 1px solid #1a0005;">
-    Todos os Direitos Reservados © 2026 • Conteúdo Adulto Educativo
+    Todos os Direitos Reservados © 2026 • Proibido para menores de 18 anos
   </footer>
 
   <div class="barra-fixa-venda">
-    <a href="#checkout" class="btn-sangue" style="width: 100%; padding: 18px; font-size: 12px;">
-      Garantir Acesso Imediato
+    <a href="#checkout" class="btn-sangue" style="width: 100%; padding: 18px; font-size: 13px;">
+      Garantir Tudo Por R$ 29,99
     </a>
   </div>
 
