@@ -27,7 +27,7 @@
 
     body {
       background-color: var(--bg-absoluto);
-      background-image: radial-gradient(circle at 50% 0%, #1f0006 0%, transparent 70%);
+      background-image: radial-gradient(circle at 50% 0%, #1a0005 0%, transparent 80%);
       color: var(--texto-claro);
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -45,7 +45,7 @@
     }
 
     .section {
-      padding: 120px 0;
+      padding: 130px 0;
       position: relative;
     }
 
@@ -53,39 +53,21 @@
       border-bottom: 1px solid var(--linha-sensual);
     }
 
-    /* IMAGENS ELEGANTES */
-    .imagem-sensual {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-      opacity: 0.85;
-      transition: opacity 0.5s;
+    /* ESPAÇOS INVISÍVEIS PARA MANTER A AURA (Sem imagens) */
+    .espaco-imagem-vazio-hero { 
+      width: 100%; 
+      min-height: 700px; 
+      background: transparent; 
     }
-    .imagem-sensual:hover { opacity: 1; }
-    
-    .imagem-box-hero {
-      width: 100%;
-      max-width: 500px;
-      height: 600px;
-      margin: 0 auto;
-      border: 1px solid var(--linha-sensual);
-      padding: 10px;
-      background: var(--bg-veludo);
-    }
-
-    .imagem-box-menor {
-      width: 100%;
-      height: 400px;
-      border: 1px solid var(--linha-sensual);
-      padding: 10px;
-      background: var(--bg-veludo);
+    .espaco-imagem-vazio-menor { 
+      width: 100%; 
+      min-height: 400px; 
+      background: transparent; 
     }
 
     /* --- HERO --- */
     .hero {
-      min-height: 100vh;
+      min-height: 110vh;
       display: flex;
       align-items: center;
       padding-top: 80px;
@@ -136,11 +118,11 @@
       font-weight: 500;
       font-size: 15px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 24px 40px;
+      letter-spacing: 3px;
+      padding: 24px 50px;
       text-decoration: none;
       border: 1px solid var(--vermelho-neon);
-      box-shadow: 0 0 30px rgba(138, 3, 26, 0.5);
+      box-shadow: 0 0 40px rgba(138, 3, 26, 0.4);
       transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
@@ -149,7 +131,7 @@
 
     .btn-sangue:hover {
       background: var(--vermelho-neon);
-      box-shadow: 0 0 50px rgba(217, 4, 41, 0.8);
+      box-shadow: 0 0 60px rgba(217, 4, 41, 0.7);
       transform: translateY(-2px);
     }
 
@@ -179,9 +161,9 @@
 
     .caixa-comparacao p { font-size: 14px; color: var(--texto-pele); }
 
-    /* --- A LISTA GIGANTE DE CONTEÚDO (O Segredo da Oferta) --- */
+    /* --- O ÍNDICE DO PRAZER (Lista de 24 itens formatada com luxo) --- */
     .titulo-secao {
-      font-size: clamp(32px, 5vw, 48px);
+      font-size: clamp(36px, 5vw, 54px);
       text-align: center;
       margin-bottom: 20px;
       color: #fff;
@@ -200,42 +182,58 @@
 
     .mega-lista-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px 40px;
       max-width: 1000px;
       margin: 0 auto;
     }
 
     .mega-item {
       display: flex;
-      align-items: center;
-      gap: 15px;
-      background: var(--bg-veludo);
-      padding: 20px;
-      border: 1px solid rgba(255,255,255,0.03);
-      transition: background 0.3s;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20px;
+      border-left: 1px solid var(--linha-sensual);
+      position: relative;
+      transition: border-color 0.3s;
     }
 
     .mega-item:hover {
-      background: rgba(138, 3, 26, 0.1);
-      border-color: var(--linha-sensual);
+      border-left-color: var(--vermelho-neon);
     }
 
-    .mega-icone {
-      color: var(--dourado-pele);
-      font-size: 20px;
+    .mega-item::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 0;
+      background: var(--vermelho-neon);
+      transition: height 0.4s ease;
+    }
+
+    .mega-item:hover::before {
+      height: 100%;
     }
 
     .mega-texto {
-      font-size: 16px;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
       color: #fff;
-      font-weight: 400;
+      font-style: italic;
       letter-spacing: 0.5px;
     }
     
     .destaque-bonus {
-      color: var(--vermelho-neon);
-      font-weight: 500;
+      color: var(--dourado-pele);
+      font-weight: 600;
+      font-style: normal;
+      font-family: 'Jost', sans-serif;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
     }
 
     /* --- OFERTA / CHECKOUT --- */
@@ -291,32 +289,28 @@
       z-index: 9999;
     }
 
-    /* RESPONSIVIDADE */
+    /* RESPONSIVIDADE PRECISA */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
       .hero p.lead { margin: 0 auto 40px; }
       .tag-provocante { margin: 0 auto 30px; }
-      .imagem-box-hero { height: 450px; }
-      .section { padding: 80px 0; }
+      .espaco-imagem-vazio-hero { min-height: 400px; }
+      .section { padding: 90px 0; }
       
       .grid-lado-a-lado-rigido { grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 40px; }
       .caixa-comparacao { padding: 25px 15px; }
       .caixa-comparacao h3 { font-size: 16px; margin-bottom: 10px; }
       .caixa-comparacao p { font-size: 12px; }
 
-      .mega-lista-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .mega-item { padding: 15px 10px; gap: 10px; }
-      .mega-texto { font-size: 13px; }
+      .mega-lista-grid { grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
+      .mega-item { padding-left: 15px; }
+      .mega-texto { font-size: 15px; }
       
       .checkout-box { padding: 50px 20px; }
       .preco-destaque { font-size: 65px; }
 
       .barra-fixa-venda { display: block; }
       body { padding-bottom: 80px; }
-    }
-    
-    @media (max-width: 400px) {
-      .mega-lista-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -327,21 +321,19 @@
       <div>
         <span class="tag-provocante">O Fim da Rotina Fria</span>
         <h1>O toque que <br><i>arrepia</i> a pele.</h1>
-        <p class="lead">A verdade nua e crua: a pressa mata a intimidade. Descubra como dominar a técnica que faz o corpo inteiro tremer e reacende um tesão que vocês nem lembravam que existia.</p>
+        <p class="lead">A verdade nua e crua: a pressa mata a intimidade. O corpo acostuma e o tesão some. Descubra como dominar a técnica que prolonga a excitação e faz a pessoa se entregar de olhos fechados.</p>
         <a href="#checkout" class="btn-sangue">Quero Dominar a Técnica</a>
       </div>
       
-      <div class="imagem-box-hero">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" alt="Clima Sensual" class="imagem-sensual">
-      </div>
+      <div class="espaco-imagem-vazio-hero"></div>
     </div>
   </section>
 
   <section class="section section-borda">
     <div class="container">
-      <h2 class="titulo-secao">Por que a vontade some com o tempo?</h2>
+      <h2 class="titulo-secao">O corpo se acostuma.</h2>
       <p class="paragrafo-sensual">
-        Sabe aquele toque automático? Onde você já sabe exatamente o que o outro vai fazer, antes mesmo de ele encostar? Isso mata o desejo. O corpo acostuma.
+        Sabe aquele toque automático? Onde você já sabe exatamente o que o outro vai fazer, antes mesmo de ele encostar? Isso mata o desejo. Mas a solução não é inventar malabarismos, é voltar à essência da pele.
       </p>
 
       <div class="grid-lado-a-lado-rigido">
@@ -359,17 +351,15 @@
 
   <section class="section section-borda" style="background: var(--bg-veludo);">
     <div class="container hero-grid">
-      <div class="imagem-box-menor">
-        <img src="https://images.unsplash.com/photo-1616012480717-fd9867059ca0?q=80&w=800&auto=format&fit=crop" alt="Massagem e Toque" class="imagem-sensual" style="filter: brightness(0.8) contrast(1.2);">
-      </div>
+      <div class="espaco-imagem-vazio-menor"></div>
       
       <div>
-        <h2 class="titulo-secao" style="text-align: left; font-size: 36px;">Esqueça os rituais bizarros.</h2>
+        <h2 class="titulo-secao" style="text-align: left; font-size: 36px;">A arte do controle sutil.</h2>
         <p class="paragrafo-sensual" style="text-align: left; margin-bottom: 20px;">
-          O que você vai ver aqui não tem nada a ver com coisas esquisitas que você vê na internet. É técnica pura e simples aplicada à anatomia.
+          O que você vai ver aqui não tem nada a ver com misticismo ou rituais complexos. É a pura coordenação de intenção, pressão e respiração.
         </p>
         <p class="paragrafo-sensual" style="text-align: left;">
-          É saber exatamente onde colocar as mãos, que pressão usar em cada momento e como pegar o controle da situação para fazer o outro se entregar totalmente a você.
+          É saber exatamente onde repousar a mão, que áreas adormecidas despertar primeiro e como fazer o silêncio trabalhar a seu favor para criar uma tensão elétrica no quarto.
         </p>
       </div>
     </div>
@@ -377,42 +367,42 @@
 
   <section class="section">
     <div class="container">
-      <span class="tag-provocante" style="display: block; text-align: center; margin: 0 auto 15px;">O Arsenal Completo</span>
-      <h2 class="titulo-secao">O que você vai receber hoje:</h2>
+      <span class="tag-provocante" style="display: block; text-align: center; margin: 0 auto 15px;">Acesso Restrito</span>
+      <h2 class="titulo-secao">O Índice do Prazer</h2>
       <p class="paragrafo-sensual">
-        Nós não escondemos o jogo. Você vai ter acesso ao acervo mais completo já criado sobre a arte de dar prazer, cobrindo absolutamente tudo:
+        Nenhum segredo foi retido. Este é o mapeamento completo e definitivo que você terá em mãos para redefinir qualquer experiência íntima:
       </p>
 
       <div class="mega-lista-grid">
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Teorias Avançadas</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Relaxante</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Erótica</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Japonesa</span></div>
+        <div class="mega-item"><span class="mega-texto">Teorias Avançadas</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Relaxante</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Erótica</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Japonesa</span></div>
         
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Tântrica</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Lingam</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Yoni</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Sensitiva</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Tântrica</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Lingam</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Yoni</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Sensitiva</span></div>
         
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Massagem Orgástica</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Técnicas de Posições</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Pontos de Prazer</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Sexo Oral</span></div>
+        <div class="mega-item"><span class="mega-texto">Massagem Orgástica</span></div>
+        <div class="mega-item"><span class="mega-texto">Técnicas de Posições</span></div>
+        <div class="mega-item"><span class="mega-texto">Pontos de Prazer</span></div>
+        <div class="mega-item"><span class="mega-texto">Sexo Oral</span></div>
         
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Esguicho Feminino</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Pompoarismo Feminino</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Pompoarismo Masculino</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Posições Sexuais</span></div>
+        <div class="mega-item"><span class="mega-texto">Esguicho Feminino</span></div>
+        <div class="mega-item"><span class="mega-texto">Pompoarismo Feminino</span></div>
+        <div class="mega-item"><span class="mega-texto">Pompoarismo Masculino</span></div>
+        <div class="mega-item"><span class="mega-texto">Posições Sexuais</span></div>
         
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Desafios na Hora H</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Trilogia 50 Tons de Cinza</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto">Músicas Ambiente para Sexo</span></div>
-        <div class="mega-item"><span class="mega-icone">✦</span><span class="mega-texto destaque-bonus">Bônus Exclusivos</span></div>
+        <div class="mega-item"><span class="mega-texto">Desafios na Hora H</span></div>
+        <div class="mega-item"><span class="mega-texto">Trilogia 50 Tons de Cinza</span></div>
+        <div class="mega-item"><span class="mega-texto">Músicas Ambiente para Sexo</span></div>
+        <div class="mega-item"><span class="mega-texto destaque-bonus">Bônus Exclusivos</span></div>
         
-        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">Acesso Vitalício</span></div>
-        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">Certificado Incluso</span></div>
-        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">Suporte Exclusivo</span></div>
-        <div class="mega-item" style="border-color: var(--vermelho-sangue);"><span class="mega-icone">✓</span><span class="mega-texto destaque-bonus">7 Dias de Garantia</span></div>
+        <div class="mega-item"><span class="mega-texto destaque-bonus">Acesso Vitalício</span></div>
+        <div class="mega-item"><span class="mega-texto destaque-bonus">Certificado Incluso</span></div>
+        <div class="mega-item"><span class="mega-texto destaque-bonus">Suporte Exclusivo</span></div>
+        <div class="mega-item"><span class="mega-texto destaque-bonus">7 Dias de Garantia</span></div>
       </div>
     </div>
   </section>
@@ -421,35 +411,35 @@
     <div class="container">
       <div class="checkout-box">
         <span class="tag-provocante">Acesso Imediato</span>
-        <h2 class="titulo-secao" style="margin-bottom: 10px;">Chegou a hora de tentar na prática.</h2>
+        <h2 class="titulo-secao" style="margin-bottom: 10px;">O limiar da entrega.</h2>
         <p class="paragrafo-sensual" style="margin-bottom: 30px;">
-          Baixe no celular e leia com total privacidade. Todo o pacote acima será enviado para o seu e-mail no mesmo segundo em que a compra for aprovada.
+          O acervo completo será libertado para o seu e-mail no instante em que a aquisição for confirmada. Leia no seu tempo, experimente hoje à noite.
         </p>
 
         <div class="preco-wrapper">
-          <div class="preco-corte">Valor Normal: R$ 147,00</div>
+          <div class="preco-corte">Valor Original: R$ 147,00</div>
           <div class="preco-destaque">R$ 29,99</div>
-          <div style="color: var(--texto-pele); letter-spacing: 2px; font-size: 13px; margin-top: 15px; text-transform: uppercase;">Pagamento Único</div>
+          <div style="color: var(--texto-pele); letter-spacing: 2px; font-size: 13px; margin-top: 15px; text-transform: uppercase;">Acesso Único e Definitivo</div>
         </div>
 
         <a href="#" class="btn-sangue" style="width: 100%; max-width: 450px; font-size: 18px; padding: 25px 0;">
-          Quero o Pacote Completo Agora
+          Desbloquear Acervo por R$ 29,99
         </a>
 
         <div class="garantia-sigilo">
-          <strong>⚠️ PRIVACIDADE GARANTIDA:</strong> Sabemos que sigilo é tudo nesse assunto. Pode ficar tranquilo: o nome que vai aparecer na fatura do seu cartão é super discreto (como "PGTO*CURSO"). Ninguém vai saber o que você comprou. E se você ler e não gostar, você tem a garantia de 7 dias para pedir o dinheiro de volta. Risco zero.
+          <strong>⚠️ PRIVACIDADE BLINDADA:</strong> O sigilo é parte da nossa entrega. A sua fatura trará um nome completamente neutro (como "PGTO*DIGITAL"). Ninguém saberá o que você adquiriu. Além disso, seu risco é zero: você tem 7 dias de garantia incondicional para testar o material.
         </div>
       </div>
     </div>
   </section>
 
   <footer style="text-align: center; padding: 50px 20px; font-size: 11px; color: #444; letter-spacing: 3px; text-transform: uppercase; border-top: 1px solid #1a0005;">
-    Todos os Direitos Reservados © 2026 • Proibido para menores de 18 anos
+    Todos os Direitos Reservados © 2026 • Material Destinado a Maiores de 18 Anos
   </footer>
 
   <div class="barra-fixa-venda">
     <a href="#checkout" class="btn-sangue" style="width: 100%; padding: 18px; font-size: 13px;">
-      Garantir Tudo Por R$ 29,99
+      Garantir Acervo Completo
     </a>
   </div>
 
