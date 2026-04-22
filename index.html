@@ -3,321 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Segredo Tântrico | O Guia Definitivo</title>
+  <title>O Segredo do Prazer Absoluto</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
   
   <style>
-    /* Reset e Variáveis */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
     :root {
-      --bg: #050505;
-      --bg-panel: #121212;
-      --primary: #d32f2f; /* Vermelho Escuro/Vinho Conversivo */
-      --primary-hover: #b71c1c;
-      --accent: #facc15; /* Amarelo/Dourado PLR */
-      --text: #ffffff;
-      --text-muted: #a3a3a3;
-      --border: #262626;
+      --bg-dark: #050002;
+      --red-blood: #9E001C;
+      --red-glow: #E60028;
+      --gold: #D4AF37;
+      --text-light: #F4F4F4;
+      --text-muted: #A0A0A0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
+      background-color: var(--bg-dark);
+      /* Fundo escuro com um feixe de luz vermelha provocante no topo */
+      background-image: radial-gradient(circle at 50% 0%, #2A0008 0%, var(--bg-dark) 60%);
+      color: var(--text-light);
       font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* Barra de Urgência do Topo (Como no exemplo) */
-    .top-bar {
-      background-color: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 12px 10px;
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 1px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
-    }
-    
-    .timer-text { color: var(--accent); font-size: 16px; margin-left: 8px;}
 
     .container {
       width: min(900px, 100% - 40px);
       margin: 0 auto;
     }
 
-    /* Hero Section (Primeira Dobra) */
-    .hero {
-      padding: 120px 0 60px;
-      text-align: center;
-      background: radial-gradient(circle at 50% 0%, #1a080a 0%, #050505 70%);
+    /* Tipografia de Alto Luxo (Cinzel para títulos) */
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
     }
 
-    .hero-kicker {
-      color: var(--accent);
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 14px;
+    /* Top Bar Sigilo */
+    .top-bar {
+      background: #000;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 10px;
+      font-size: 11px;
       letter-spacing: 2px;
-      margin-bottom: 15px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #1A0005;
+    }
+    .top-bar span { color: var(--red-glow); font-weight: bold; }
+
+    /* Hero Section (A primeira impressão de impacto) */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-tag {
+      color: var(--red-glow);
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 20px;
       display: inline-block;
     }
 
     .hero h1 {
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 900;
+      font-size: clamp(36px, 6vw, 54px);
       line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: var(--primary);
+      margin-bottom: 24px;
+      color: #FFF;
+      text-shadow: 0 0 40px rgba(230, 0, 40, 0.3);
     }
 
     .hero p.lead {
       font-size: clamp(16px, 3vw, 20px);
       color: var(--text-muted);
-      margin: 0 auto 30px;
-      max-width: 750px;
-      font-weight: 500;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto 40px;
     }
 
-    /* Mockup do E-book */
-    .mockup-wrapper {
-      max-width: 400px;
-      margin: 0 auto 30px;
-    }
-    .mockup-wrapper img {
+    /* ESPAÇO EM BRANCO PARA A IMAGEM (SEM BORDAS, SEM DESENHOS) */
+    .blank-image-space {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));
+      max-width: 400px;
+      margin: 0 auto 40px;
+      /* Deixado completamente invisível. Apenas ocupa o espaço para você colocar o <img> depois */
+      min-height: 20px; 
     }
 
-    /* Botão de Alta Conversão Pulsante */
-    .btn-cta {
+    /* Botão de Alta Tensão (Converte muito em nicho adulto) */
+    .btn-hot {
       display: inline-block;
       width: 100%;
-      max-width: 450px;
-      background: linear-gradient(to bottom, #22c55e, #16a34a); /* Verde converte MUITO */
-      color: #fff;
-      font-size: 20px;
+      max-width: 400px;
+      background: linear-gradient(135deg, var(--red-blood), #D00020);
+      color: #FFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
       font-weight: 800;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 22px 10px;
+      border-radius: 4px;
       text-decoration: none;
-      padding: 20px 10px;
-      border-radius: 6px;
-      box-shadow: 0 10px 20px rgba(22, 163, 74, 0.4);
-      transition: all 0.3s;
-      animation: pulse 2s infinite;
-      border-bottom: 4px solid #14532d;
+      box-shadow: 0 0 25px rgba(230, 0, 40, 0.4);
+      border-bottom: 3px solid #600010;
+      transition: all 0.3s ease;
+      animation: pulse-hot 2s infinite;
     }
 
-    .btn-cta:hover {
+    .btn-hot:hover {
       transform: translateY(-2px);
-      filter: brightness(1.1);
+      box-shadow: 0 0 35px rgba(230, 0, 40, 0.7);
     }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    @keyframes pulse-hot {
+      0% { box-shadow: 0 0 0 0 rgba(230, 0, 40, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(230, 0, 40, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(230, 0, 40, 0); }
     }
 
-    /* Badges de Confiança (Pegos direto da sua referência) */
-    .trust-badges {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .badge-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
+    .garantia-text {
+      margin-top: 15px;
+      font-size: 12px;
       color: var(--text-muted);
-      font-weight: 600;
-      background: var(--bg-panel);
-      padding: 8px 16px;
-      border-radius: 50px;
-      border: 1px solid var(--border);
+      letter-spacing: 1px;
     }
 
-    /* Seções de Conteúdo Limpas */
+    /* Seções de Conteúdo Escuras e Elegantes */
     .section {
-      padding: 60px 0;
-      border-top: 1px solid var(--border);
+      padding: 80px 0;
+      border-top: 1px solid #110003;
     }
 
     .section-title {
+      font-size: clamp(28px, 4vw, 40px);
       text-align: center;
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 800;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      color: #FFF;
     }
 
-    /* Grid de Benefícios Agressivo */
-    .benefits-grid {
+    .erotic-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
-    .benefit-card {
-      background-color: var(--bg-panel);
-      border: 1px solid var(--border);
-      padding: 30px;
-      border-radius: 8px;
-      border-left: 4px solid var(--primary);
+    .erotic-card {
+      background: #0A0003;
+      padding: 40px 30px;
+      border-left: 2px solid var(--red-blood);
+      transition: transform 0.3s;
+    }
+    
+    .erotic-card:hover {
+      background: #110005;
+      transform: translateY(-5px);
     }
 
-    .benefit-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: var(--accent);
+    .erotic-card h3 {
+      color: var(--red-glow);
+      font-size: 22px;
+      margin-bottom: 15px;
     }
 
-    .benefit-card p {
-      color: var(--text-muted);
+    .erotic-card p {
       font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 300;
     }
 
-    /* Caixa de Oferta Final */
-    .offer-box {
-      background: linear-gradient(145deg, #121212, #0a0a0a);
-      border: 2px solid var(--primary);
-      border-radius: 12px;
-      padding: 50px 30px;
+    /* Caixa de Oferta "Dark Luxury" */
+    .checkout-box {
+      background: #0A0003;
+      border: 1px solid #2A0008;
+      padding: 60px 40px;
       text-align: center;
-      margin-top: 40px;
-      box-shadow: 0 20px 50px rgba(211, 47, 47, 0.15);
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
     }
 
-    .price-old {
+    .price-strike {
       font-size: 20px;
-      color: #666;
+      color: #555;
       text-decoration: line-through;
-      font-weight: 600;
     }
 
-    .price-new {
+    .price-final {
+      font-family: 'Cinzel', serif;
       font-size: 64px;
-      font-weight: 900;
-      color: var(--accent);
+      color: #FFF;
       line-height: 1;
-      margin: 10px 0 20px;
+      margin: 10px 0 30px;
+      text-shadow: 0 0 20px rgba(230, 0, 40, 0.2);
     }
 
-    .garantia-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
+    .sigilo-box {
       margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #1A0005;
+      font-size: 12px;
+      color: #666;
       text-align: left;
     }
 
-    .garantia-box img {
-      width: 60px;
-    }
-
-    .garantia-box p {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 300px;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 12px;
-      color: #555;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
+      padding: 40px 20px;
+      font-size: 11px;
+      color: #333;
+      background: #000;
     }
   </style>
 </head>
 <body>
 
   <div class="top-bar">
-    ⚠️ ATENÇÃO: OFERTA EXPIRA HOJE! FALTAM <span id="timer" class="timer-text">14:59</span>
+    Conteúdo Adulto Exclusivo • <span>Sigilo Absoluto</span> • Fatura Discreta
   </div>
 
-  <header class="hero">
+  <section class="hero">
     <div class="container">
-      <div class="hero-kicker">Conteúdo Exclusivo para Adultos</div>
+      <div class="hero-tag">O Fim da Monotonia</div>
       
-      <h1>Aprenda a Despertar o Prazer Profundo com o <span>Segredo Tântrico</span></h1>
+      <h1>Domine a Arte do <br><span style="color: var(--red-glow);">Prazer Absoluto</span></h1>
       
-      <p class="lead">O guia prático, direto e definitivo com técnicas de massagem para criar uma conexão intensa, eliminar a rotina e dominar o prazer.</p>
+      <p class="lead">Um manual prático e sem censura para explorar novas sensações, provocar orgasmos intensos e elevar a intimidade a um nível que vocês nunca imaginaram.</p>
 
-      <div class="mockup-wrapper">
-        <img src="https://images.unsplash.com/photo-1616012480717-fd9867059ca0?auto=format&fit=crop&w=600&q=80" alt="Capa Guia Segredo Tântrico">
+      <div class="blank-image-space">
+        
       </div>
 
-      <a href="#" class="btn-cta">
-        QUERO ACESSO IMEDIATO AO GUIA
+      <a href="#comprar" class="btn-hot">
+        DESBLOQUEAR ACESSO AGORA
       </a>
-
-      <div class="trust-badges">
-        <div class="badge-item">🛡️ Garantia de 7 Dias</div>
-        <div class="badge-item">⚡ Acesso Imediato</div>
-        <div class="badge-item">⭐ +15.000 Alunos</div>
-        <div class="badge-item">🔒 Pagamento Seguro</div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">A Intimidade Não Precisa Esfriar</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>Fim do Automático</h3>
-          <p>Se o toque na sua relação virou apenas um hábito previsível, descubra como mapear o corpo e trazer a sensibilidade intensa de volta.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>Atmosfera Perfeita</h3>
-          <p>O passo a passo exato para preparar o ambiente. Aprenda a usar a iluminação, a temperatura e a condução para criar uma entrega real.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>Toque Magnético</h3>
-          <p>Técnicas de deslizamento e ritmo que qualquer iniciante pode aplicar hoje mesmo, sem misticismos exagerados, apenas anatomia e conexão.</p>
-        </div>
-      </div>
+      <div class="garantia-text">🔒 Compra 100% Segura e Imediata</div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="offer-box">
-        <h2 style="font-size: 28px; margin-bottom: 10px;">Liberte a Sua Melhor Versão Hoje</h2>
-        <p style="color: var(--text-muted); margin-bottom: 30px;">Acesso vitalício ao guia completo em formato digital. Leia no celular, tablet ou computador, de forma 100% sigilosa.</p>
-        
-        <div class="price-old">De R$ 97,00</div>
-        <div class="price-new">R$ 27,00</div>
-        
-        <a href="#" class="btn-cta" style="animation: none;">
-          COMPRAR AGORA POR R$ 27,00
+      <h2 class="section-title">O Que Você Vai Aprender</h2>
+      
+      <div class="erotic-grid">
+        <div class="erotic-card">
+          <h3>Mapeamento do Desejo</h3>
+          <p>Descubra as zonas erógenas ocultas que a maioria desconhece. Toques precisos que causam arrepios e preparam o corpo para uma entrega total.</p>
+        </div>
+        <div class="erotic-card">
+          <h3>Intensidade e Ritmo</h3>
+          <p>Aprenda a controlar a velocidade e a pressão das mãos. Como alternar entre toques suaves e firmes para levar a excitação ao limite máximo.</p>
+        </div>
+        <div class="erotic-card">
+          <h3>Atmosfera Sedutora</h3>
+          <p>O segredo para criar um ambiente irresistível. Iluminação, toques, respiração e conexão visual que quebram qualquer bloqueio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="comprar">
+    <div class="container">
+      <div class="checkout-box">
+        <h2 style="font-size: 28px; margin-bottom: 10px; color: #FFF;">Liberte o Desejo Hoje</h2>
+        <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 14px;">
+          Guia digital completo. Leia no seu celular agora mesmo, onde e quando quiser, com total privacidade.
+        </p>
+
+        <div class="price-strike">R$ 97,00</div>
+        <div class="price-final">R$ 27</div>
+
+        <a href="#" class="btn-hot" style="animation: none; width: 100%;">
+          COMPRAR POR R$ 27 AGORA
         </a>
 
-        <div class="garantia-box">
-          <span style="font-size: 40px;">🛡️</span>
-          <p><strong>Risco Zero:</strong> Você tem 7 dias de garantia incondicional. Se não gostar do conteúdo, seu dinheiro é devolvido sem perguntas. Sua privacidade e segurança são garantidas pela plataforma.</p>
+        <div class="sigilo-box">
+          <strong>⚠️ Nota de Privacidade:</strong>
+          Para garantir o seu sigilo, o nome do produto <strong>NÃO</strong> aparecerá na fatura do seu cartão. O pagamento é processado sob um nome discreto.
         </div>
       </div>
     </div>
@@ -325,34 +298,9 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Segredo Tântrico - Todos os direitos reservados.</p>
-      <p style="margin-top: 10px;">Este site não faz parte do Google, Facebook ou Instagram. Produto focado em educação íntima para maiores de 18 anos. O nome na sua fatura do cartão aparecerá de forma discreta para garantir sua privacidade.</p>
+      © 2026 Segredo Revelado. Todos os direitos reservados. Proibido para menores de 18 anos.
     </div>
   </footer>
 
-  <script>
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
-
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = minutes + ":" + seconds;
-
-            if (--timer < 0) {
-                timer = duration; // Reseta o timer quando chega a 0
-            }
-        }, 1000);
-    }
-
-    window.onload = function () {
-        var fifteenMinutes = 60 * 15,
-            display = document.querySelector('#timer');
-        startTimer(fifteenMinutes, display);
-    };
-  </script>
 </body>
 </html>
